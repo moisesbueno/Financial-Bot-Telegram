@@ -1,0 +1,27 @@
+﻿services:
+  financial-bot:
+    image: financial-bot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DOTNET_ENVIRONMENT=Development
+      - ConnectionStrings__MongoDB=
+      - BotToken=
+      - CoinLoreApi__BaseUrl=https://api.coinlore.net/api/
+    depends_on:
+      mongo-db:
+        condition : service_healthy
+  mongo-db:
+    image: mongo:latest
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: |
+        echo "try { rs.status() } catch (err) { rs.initiate({_id:'rs0',members:[{_id:0,host:'host.docker.internal:27017'}]}) }" | mongosh --port 27017 --quiet
+      interval: 180s
+      timeout: 180s
+      start_period: 0s
+      retries: 1
+    

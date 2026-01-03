@@ -1,0 +1,602 @@
+[
+  {
+    "Id": 1,
+    "Name": "Litecoin",
+    "Nameid": "litecoin",
+    "Symbol": "LTC"
+  },
+  {
+    "Id": 2,
+    "Name": "Dogecoin",
+    "Nameid": "dogecoin",
+    "Symbol": "DOGE"
+  },
+  {
+    "Id": 28,
+    "Name": "Monero",
+    "Nameid": "monero",
+    "Symbol": "XMR"
+  },
+  {
+    "Id": 58,
+    "Name": "XRP",
+    "Nameid": "ripple",
+    "Symbol": "XRP"
+  },
+  {
+    "Id": 80,
+    "Name": "Ethereum",
+    "Nameid": "ethereum",
+    "Symbol": "ETH"
+  },
+  {
+    "Id": 89,
+    "Name": "Stellar",
+    "Nameid": "stellar",
+    "Symbol": "XLM"
+  },
+  {
+    "Id": 90,
+    "Name": "Bitcoin",
+    "Nameid": "bitcoin",
+    "Symbol": "BTC"
+  },
+  {
+    "Id": 118,
+    "Name": "Ethereum Classic",
+    "Nameid": "ethereum-classic",
+    "Symbol": "ETC"
+  },
+  {
+    "Id": 134,
+    "Name": "Zcash",
+    "Nameid": "zcash",
+    "Symbol": "ZEC"
+  },
+  {
+    "Id": 257,
+    "Name": "Cardano",
+    "Nameid": "cardano",
+    "Symbol": "ADA"
+  },
+  {
+    "Id": 518,
+    "Name": "Tether",
+    "Nameid": "tether",
+    "Symbol": "USDT"
+  },
+  {
+    "Id": 2321,
+    "Name": "Bitcoin Cash",
+    "Nameid": "bitcoin-cash",
+    "Symbol": "BCH"
+  },
+  {
+    "Id": 2710,
+    "Name": "Binance Coin",
+    "Nameid": "binance-coin",
+    "Symbol": "BNB"
+  },
+  {
+    "Id": 2713,
+    "Name": "TRON",
+    "Nameid": "tron",
+    "Symbol": "TRX"
+  },
+  {
+    "Id": 2741,
+    "Name": "VeChain",
+    "Nameid": "vechain",
+    "Symbol": "VET"
+  },
+  {
+    "Id": 2750,
+    "Name": "KuCoin Shares",
+    "Nameid": "kucoin-shares",
+    "Symbol": "KCS"
+  },
+  {
+    "Id": 2751,
+    "Name": "ChainLink",
+    "Nameid": "chainlink",
+    "Symbol": "LINK"
+  },
+  {
+    "Id": 3682,
+    "Name": "Tezos",
+    "Nameid": "tezos",
+    "Symbol": "XTZ"
+  },
+  {
+    "Id": 12377,
+    "Name": "Maker",
+    "Nameid": "maker",
+    "Symbol": "MKR"
+  },
+  {
+    "Id": 32354,
+    "Name": "SingularityNET",
+    "Nameid": "singularitynet",
+    "Symbol": "AGIX"
+  },
+  {
+    "Id": 32408,
+    "Name": "XinFin Network",
+    "Nameid": "xinfin-network",
+    "Symbol": "XDCE"
+  },
+  {
+    "Id": 32417,
+    "Name": "Dai",
+    "Nameid": "dai",
+    "Symbol": "DAI"
+  },
+  {
+    "Id": 32604,
+    "Name": "Nexo",
+    "Nameid": "nexo",
+    "Symbol": "NEXO"
+  },
+  {
+    "Id": 32607,
+    "Name": "Filecoin",
+    "Nameid": "filecoin",
+    "Symbol": "FIL"
+  },
+  {
+    "Id": 32610,
+    "Name": "WETH",
+    "Nameid": "weth",
+    "Symbol": "WETH"
+  },
+  {
+    "Id": 33085,
+    "Name": "Quant",
+    "Nameid": "quant",
+    "Symbol": "QNT"
+  },
+  {
+    "Id": 33285,
+    "Name": "USD Coin",
+    "Nameid": "usd-coin",
+    "Symbol": "USDC"
+  },
+  {
+    "Id": 33422,
+    "Name": "Wrapped Bitcoin",
+    "Nameid": "wrapped-bitcoin",
+    "Symbol": "WBTC"
+  },
+  {
+    "Id": 33531,
+    "Name": "OKB",
+    "Nameid": "okb",
+    "Symbol": "OKB"
+  },
+  {
+    "Id": 33536,
+    "Name": "Matic Network",
+    "Nameid": "matic-network",
+    "Symbol": "MATIC"
+  },
+  {
+    "Id": 33644,
+    "Name": "Fantom",
+    "Nameid": "fantom",
+    "Symbol": "FTM"
+  },
+  {
+    "Id": 33718,
+    "Name": "Fetch.ai",
+    "Nameid": "fetch",
+    "Symbol": "FET"
+  },
+  {
+    "Id": 33819,
+    "Name": "Crypto.com Chain",
+    "Nameid": "crypto-com-chain",
+    "Symbol": "CRO"
+  },
+  {
+    "Id": 33830,
+    "Name": "Cosmos",
+    "Nameid": "cosmos",
+    "Symbol": "ATOM"
+  },
+  {
+    "Id": 34406,
+    "Name": "Algorand",
+    "Nameid": "algorand",
+    "Symbol": "ALGO"
+  },
+  {
+    "Id": 42227,
+    "Name": "PAX Gold",
+    "Nameid": "pax-gold",
+    "Symbol": "PAXG"
+  },
+  {
+    "Id": 42855,
+    "Name": "Tether Gold",
+    "Nameid": "tether-gold",
+    "Symbol": "XAUT"
+  },
+  {
+    "Id": 44863,
+    "Name": "Render Token",
+    "Nameid": "render-token",
+    "Symbol": "RNDR"
+  },
+  {
+    "Id": 44883,
+    "Name": "Avalanche",
+    "Nameid": "avalanche",
+    "Symbol": "AVAX"
+  },
+  {
+    "Id": 45088,
+    "Name": "Shiba Inu",
+    "Nameid": "shiba-inu",
+    "Symbol": "SHIB"
+  },
+  {
+    "Id": 45219,
+    "Name": "Polkadot",
+    "Nameid": "polkadot",
+    "Symbol": "DOT"
+  },
+  {
+    "Id": 45985,
+    "Name": "PancakeSwap",
+    "Nameid": "pancakeswap",
+    "Symbol": "CAKE"
+  },
+  {
+    "Id": 46018,
+    "Name": "Aave",
+    "Nameid": "aave",
+    "Symbol": "AAVE"
+  },
+  {
+    "Id": 46183,
+    "Name": "Injective Protocol",
+    "Nameid": "injective-protocol",
+    "Symbol": "INJ"
+  },
+  {
+    "Id": 46722,
+    "Name": "Wrapped BNB",
+    "Nameid": "wrapped-bnb",
+    "Symbol": "WBNB"
+  },
+  {
+    "Id": 46971,
+    "Name": "Staked Ether",
+    "Nameid": "staked-ether",
+    "Symbol": "STETH"
+  },
+  {
+    "Id": 46981,
+    "Name": "Lido DAO",
+    "Nameid": "lido-dao",
+    "Symbol": "LDO"
+  },
+  {
+    "Id": 47305,
+    "Name": "Uniswap",
+    "Nameid": "uniswap",
+    "Symbol": "UNI"
+  },
+  {
+    "Id": 47311,
+    "Name": "Internet Computer (IOU)",
+    "Nameid": "dfinity",
+    "Symbol": "ICP"
+  },
+  {
+    "Id": 48543,
+    "Name": "Solana",
+    "Nameid": "solana",
+    "Symbol": "SOL"
+  },
+  {
+    "Id": 48555,
+    "Name": "Hedera Hashgraph",
+    "Nameid": "hedera-hashgraph",
+    "Symbol": "HBAR"
+  },
+  {
+    "Id": 48561,
+    "Name": "The Graph",
+    "Nameid": "the-graph",
+    "Symbol": "GRT"
+  },
+  {
+    "Id": 48563,
+    "Name": "NEAR Protocol",
+    "Nameid": "near-protocol",
+    "Symbol": "NEAR"
+  },
+  {
+    "Id": 48569,
+    "Name": "Stacks",
+    "Nameid": "stacks",
+    "Symbol": "STX"
+  },
+  {
+    "Id": 48581,
+    "Name": "Curve DAO Token",
+    "Nameid": "curve-dao-token",
+    "Symbol": "CRV"
+  },
+  {
+    "Id": 48839,
+    "Name": "Pendle",
+    "Nameid": "pendle",
+    "Symbol": "PENDLE"
+  },
+  {
+    "Id": 51947,
+    "Name": "Floki Inu",
+    "Nameid": "floki-inu",
+    "Symbol": "FLOKI"
+  },
+  {
+    "Id": 54683,
+    "Name": "TON Coin",
+    "Nameid": "toncoin",
+    "Symbol": "TON"
+  },
+  {
+    "Id": 56821,
+    "Name": "Ethereum Name Service",
+    "Nameid": "ethereum-name-service",
+    "Symbol": "ENS"
+  },
+  {
+    "Id": 67117,
+    "Name": "Bitget Token",
+    "Nameid": "bitget-token",
+    "Symbol": "BGB"
+  },
+  {
+    "Id": 70485,
+    "Name": "Kaspa",
+    "Nameid": "kaspa",
+    "Symbol": "KAS"
+  },
+  {
+    "Id": 70497,
+    "Name": "Optimism",
+    "Nameid": "optimism",
+    "Symbol": "OP"
+  },
+  {
+    "Id": 82537,
+    "Name": "Bonk",
+    "Nameid": "bonk",
+    "Symbol": "BONK"
+  },
+  {
+    "Id": 84965,
+    "Name": "Flare",
+    "Nameid": "flare",
+    "Symbol": "FLR"
+  },
+  {
+    "Id": 93841,
+    "Name": "Pepe",
+    "Nameid": "pepe",
+    "Symbol": "PEPE"
+  },
+  {
+    "Id": 93845,
+    "Name": "Sui",
+    "Nameid": "sui",
+    "Symbol": "SUI"
+  },
+  {
+    "Id": 93847,
+    "Name": "Arbitrum",
+    "Nameid": "arbitrum",
+    "Symbol": "ARB"
+  },
+  {
+    "Id": 96901,
+    "Name": "Wrapped Beacon ETH",
+    "Nameid": "wrapped-beacon-eth",
+    "Symbol": "WBETH"
+  },
+  {
+    "Id": 99329,
+    "Name": "Worldcoin",
+    "Nameid": "worldcoin-wld",
+    "Symbol": "WLD"
+  },
+  {
+    "Id": 100423,
+    "Name": "First Digital USD",
+    "Nameid": "first-digital-usd",
+    "Symbol": "FDUSD"
+  },
+  {
+    "Id": 100427,
+    "Name": "Sei",
+    "Nameid": "sei",
+    "Symbol": "SEI"
+  },
+  {
+    "Id": 111341,
+    "Name": "Aptos",
+    "Nameid": "aptos",
+    "Symbol": "APT"
+  },
+  {
+    "Id": 111347,
+    "Name": "Pyth Network",
+    "Nameid": "pyth-network",
+    "Symbol": "PYTH"
+  },
+  {
+    "Id": 111357,
+    "Name": "PayPal USD",
+    "Nameid": "paypal-usd",
+    "Symbol": "PYUSD"
+  },
+  {
+    "Id": 121593,
+    "Name": "Immutable",
+    "Nameid": "immutable-x",
+    "Symbol": "IMX"
+  },
+  {
+    "Id": 121595,
+    "Name": "Mantle",
+    "Nameid": "mantle",
+    "Symbol": "MNT"
+  },
+  {
+    "Id": 121599,
+    "Name": "Conflux",
+    "Nameid": "conflux-network",
+    "Symbol": "CFX"
+  },
+  {
+    "Id": 121611,
+    "Name": "Ondo",
+    "Nameid": "ondo-finance",
+    "Symbol": "ONDO"
+  },
+  {
+    "Id": 121613,
+    "Name": "dogwifhat",
+    "Nameid": "dogwifhat",
+    "Symbol": "WIF"
+  },
+  {
+    "Id": 121619,
+    "Name": "Bittensor",
+    "Nameid": "bittensor",
+    "Symbol": "TAO"
+  },
+  {
+    "Id": 121623,
+    "Name": "Fasttoken",
+    "Nameid": "fasttoken",
+    "Symbol": "FTN"
+  },
+  {
+    "Id": 122275,
+    "Name": "Saros",
+    "Nameid": "saros",
+    "Symbol": "SAROS"
+  },
+  {
+    "Id": 122319,
+    "Name": "Aerodrome Finance",
+    "Nameid": "aerodrome-finance",
+    "Symbol": "AERO"
+  },
+  {
+    "Id": 126763,
+    "Name": "Ethena",
+    "Nameid": "ethena",
+    "Symbol": "ENA"
+  },
+  {
+    "Id": 126771,
+    "Name": "ether.fi",
+    "Nameid": "ether-fi-ethfi",
+    "Symbol": "ETHFI"
+  },
+  {
+    "Id": 135601,
+    "Name": "Render",
+    "Nameid": "render",
+    "Symbol": "RENDER"
+  },
+  {
+    "Id": 136105,
+    "Name": "Celestia",
+    "Nameid": "celestia",
+    "Symbol": "TIA"
+  },
+  {
+    "Id": 136127,
+    "Name": "SPX6900",
+    "Nameid": "spx6900",
+    "Symbol": "SPX"
+  },
+  {
+    "Id": 141199,
+    "Name": "Kaia",
+    "Nameid": "kaia",
+    "Symbol": "KAIA"
+  },
+  {
+    "Id": 144321,
+    "Name": "Binance Staked SOL",
+    "Nameid": "binance-staked-sol",
+    "Symbol": "BNSOL"
+  },
+  {
+    "Id": 146391,
+    "Name": "Ethena Labs (USDTb)",
+    "Nameid": "ethena-labs-usdtb",
+    "Symbol": "USDTb"
+  },
+  {
+    "Id": 146447,
+    "Name": "Ripple USD",
+    "Nameid": "ripple-usd",
+    "Symbol": "RLUSD"
+  },
+  {
+    "Id": 148109,
+    "Name": "Hyperliquid",
+    "Nameid": "hyperliquid",
+    "Symbol": "HYPE"
+  },
+  {
+    "Id": 148111,
+    "Name": "OFFICIAL TRUMP",
+    "Nameid": "official-trump",
+    "Symbol": "TRUMP"
+  },
+  {
+    "Id": 148129,
+    "Name": "Aethir",
+    "Nameid": "aethir",
+    "Symbol": "ATH"
+  },
+  {
+    "Id": 148191,
+    "Name": "Sonic (prev. FTM)",
+    "Nameid": "sonic-prev-ftm",
+    "Symbol": "S"
+  },
+  {
+    "Id": 150883,
+    "Name": "Story",
+    "Nameid": "story-protocol",
+    "Symbol": "IP"
+  },
+  {
+    "Id": 151099,
+    "Name": "Pi",
+    "Nameid": "pi",
+    "Symbol": "PI"
+  },
+  {
+    "Id": 151101,
+    "Name": "Pudgy Penguins",
+    "Nameid": "pudgy-penguins",
+    "Symbol": "PENGU"
+  },
+  {
+    "Id": 158405,
+    "Name": "Ethena USDe",
+    "Nameid": "ethena-usde",
+    "Symbol": "USDe"
+  }
+]
