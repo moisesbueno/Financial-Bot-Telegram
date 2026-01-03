@@ -4,6 +4,8 @@ This project consumes third-api and send responses with telegram
 ### How to run ?
 ```console
 dotnet run
+or
+docker compose up --build
 ```
 ### Requirements 
 
