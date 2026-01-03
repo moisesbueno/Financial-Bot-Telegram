@@ -1,6 +1,9 @@
 using Financial.Bot.HostedServices;
 using Financial.Bot.Services;
-using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Localization;
 using Serilog;
 
 namespace Financial.Bot;
@@ -32,11 +35,6 @@ public class Program
 
         builder.Services.AddHostedService<TelegramHostedService>();
         builder.Services.AddHostedService<SaveCoinsHostedService>();
-
-        builder.Services.Configure<RequestLocalizationOptions>(options =>
-        {
-            options.SetDefaultCulture("en-US");
-        });
 
         var host = builder.Build();
         host.Run();
