@@ -6,8 +6,8 @@
       dockerfile: Dockerfile
     environment:
       - DOTNET_ENVIRONMENT=Development
-      - ConnectionStrings__MongoDB=
-      - BotToken=
+      - ConnectionStrings__MongoDB=""
+      - BotToken=""
       - CoinLoreApi__BaseUrl=https://api.coinlore.net/api/
     depends_on:
       mongo-db:
