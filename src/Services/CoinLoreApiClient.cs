@@ -11,13 +11,11 @@ namespace Financial.Bot.Services
 
         public async Task<List<CoinLoreResponse>> GetAllCoins(CancellationToken cancellationToken = default)
         {
-            var client = httpClientFactory.CreateClient();
+            using var client = httpClientFactory.CreateClient();
 
-            var request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri($"{_options.BaseUrl}/tickers/"),
-            };
+            using var request = new HttpRequestMessage();
+            request.Method = HttpMethod.Get;
+            request.RequestUri = new Uri($"{_options.BaseUrl}/tickers/");
 
             using var response = await client.SendAsync(request, cancellationToken);
 
@@ -30,7 +28,7 @@ namespace Financial.Bot.Services
 
         public async Task<CoinLoreResponse> GetCoinByIdAsync(int id, CancellationToken cancellationToken = default)
         {
-            var client = httpClientFactory.CreateClient();
+            using var client = httpClientFactory.CreateClient();
             client.BaseAddress = new Uri(_options.BaseUrl);
 
             using var response = await client.GetAsync($"ticker/?id={id}", cancellationToken);
