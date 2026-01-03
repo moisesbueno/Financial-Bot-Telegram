@@ -20,7 +20,9 @@ public class Program
 
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.Console()
+            #if MONGO_DB
                 .WriteTo.MongoDB(builder.Configuration.GetConnectionString("MongoDb"), "logs")
+            #endif
                 .CreateLogger();
 
             logging.ClearProviders();

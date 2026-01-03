@@ -1,11 +1,15 @@
 # Financial bot price 
 This project consumes third-api and send responses with telegram
 
+### How to run ?
+```console
+dotnet run
+```
 ### Requirements 
 
-* DOTNET 8 
-* Mongo DB
-* Docker 
+* DOTNET 10
+* Mongo DB (Optional)
+* Docker (Optional)
 * Telegram bot token
 
 ```json
