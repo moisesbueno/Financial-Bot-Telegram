@@ -28,3 +28,5 @@ appsettings.Development.json
 ```
 
 <img width="240" height="113" alt="image" src="https://github.com/user-attachments/assets/663522f8-9c80-46ab-8792-d83a5d82be8b" />
+<img width="721" height="139" alt="image" src="https://github.com/user-attachments/assets/78d7eda3-02d3-46cd-81d6-d6125f916126" />
+
