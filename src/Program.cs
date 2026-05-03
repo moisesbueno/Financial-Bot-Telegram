@@ -18,19 +18,24 @@ public class Program
         {
             logging.ClearProviders();
 
-            Log.Logger = new LoggerConfiguration()
-                .WriteTo.Console()
-            #if MONGO_DB
-                .WriteTo.MongoDB(builder.Configuration.GetConnectionString("MongoDb"), "logs")
-            #endif
-                .CreateLogger();
+            var loggerConfiguration = new LoggerConfiguration()
+                                       .WriteTo.Console();
+
+            var mongoConnectionString = builder.Configuration.GetConnectionString("MongoDb");
+
+            if (string.IsNullOrEmpty(mongoConnectionString))
+            {
+                loggerConfiguration = loggerConfiguration.WriteTo.MongoDB(mongoConnectionString, "logs");
+            }
+
+            Log.Logger = loggerConfiguration.CreateLogger();
 
             logging.ClearProviders();
-            logging.AddSerilog();
+            logging.AddSerilog(Log.Logger, true);
         });
         builder.Services.AddHttpClient();
         builder.Services.Configure<CoinLoreApiOptions>(builder.Configuration.GetSection("CoinLoreApi"));
-       
+
         builder.Services.AddTransient<ICoinLoreApiClient, CoinLoreApiClient>();
         builder.Services.AddTransient<CryptoService>();
         builder.Services.AddMemoryCache();
