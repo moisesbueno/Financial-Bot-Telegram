@@ -1,9 +1,5 @@
 using Financial.Bot.HostedServices;
 using Financial.Bot.Services;
-using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Localization;
 using Serilog;
 
 namespace Financial.Bot;
