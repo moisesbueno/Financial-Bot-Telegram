@@ -20,7 +20,7 @@ public class Program
 
             var mongoConnectionString = builder.Configuration.GetConnectionString("MongoDb");
 
-            if (string.IsNullOrEmpty(mongoConnectionString))
+            if (!string.IsNullOrEmpty(mongoConnectionString))
             {
                 loggerConfiguration = loggerConfiguration.WriteTo.MongoDB(mongoConnectionString, "logs");
             }
