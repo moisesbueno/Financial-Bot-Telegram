@@ -15,6 +15,7 @@ public class Program
             logging.ClearProviders();
 
             var loggerConfiguration = new LoggerConfiguration()
+                                       .MinimumLevel.Information()
                                        .WriteTo.Console();
 
             var mongoConnectionString = builder.Configuration.GetConnectionString("MongoDb");
