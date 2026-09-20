@@ -1,6 +1,9 @@
 using Financial.Bot.HostedServices;
 using Financial.Bot.Services;
+using Microsoft.Extensions.Options;
+using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using Polly;
 
 namespace Financial.Bot;
 
@@ -30,10 +33,25 @@ public class Program
             logging.ClearProviders();
             logging.AddSerilog(Log.Logger, true);
         });
-        builder.Services.AddHttpClient();
-        builder.Services.Configure<CoinLoreApiOptions>(builder.Configuration.GetSection("CoinLoreApi"));
 
-        builder.Services.AddTransient<ICoinLoreApiClient, CoinLoreApiClient>();
+        builder.Services.AddOptions<CoinLoreApiOptions>()
+                        .BindConfiguration(CoinLoreApiOptions.CoinLoreApi)
+                        .ValidateOnStart();
+
+        builder.Services.AddHttpClient<ICoinLoreApiClient, CoinLoreApiClient>((sp, client) =>
+                        {
+                            var options = sp.GetRequiredService<IOptions<CoinLoreApiOptions>>().Value;
+                            client.BaseAddress = new Uri(options.BaseUrl);
+                        })
+                        .AddStandardResilienceHandler(options =>
+                        {
+                            options.Retry.MaxRetryAttempts = 3;
+                            options.Retry.BackoffType = DelayBackoffType.Exponential;
+                            options.Retry.UseJitter = true;
+                            options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(5);
+                            options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(30);
+                        });
+
         builder.Services.AddTransient<CryptoService>();
         builder.Services.AddMemoryCache();
 

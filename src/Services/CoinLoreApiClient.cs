@@ -4,40 +4,30 @@ using Newtonsoft.Json;
 
 namespace Financial.Bot.Services
 {
-    public class CoinLoreApiClient(IHttpClientFactory httpClientFactory, IOptions<CoinLoreApiOptions> options)
-        : ICoinLoreApiClient
+    public class CoinLoreApiClient(HttpClient httpClient) : ICoinLoreApiClient
+{
+    public async Task<List<CoinLoreResponse>> GetAllCoins(CancellationToken cancellationToken = default)
     {
-        private readonly CoinLoreApiOptions _options = options.Value;
+        using var response = await httpClient.GetAsync("tickers/", cancellationToken);
 
-        public async Task<List<CoinLoreResponse>> GetAllCoins(CancellationToken cancellationToken = default)
-        {
-            using var client = httpClientFactory.CreateClient();
+        if (!response.IsSuccessStatusCode)
+            return [];
 
-            using var request = new HttpRequestMessage();
-            request.Method = HttpMethod.Get;
-            request.RequestUri = new Uri($"{_options.BaseUrl}/tickers/");
+        var body = await response.Content.ReadAsStringAsync(cancellationToken);
 
-            using var response = await client.SendAsync(request, cancellationToken);
-
-            var body = await response.Content.ReadAsStringAsync(cancellationToken);
-
-            var result = JsonConvert.DeserializeObject<CoinLoreResponseAll>(body);
-
-            return response.IsSuccessStatusCode ? result.Coins : Enumerable.Empty<CoinLoreResponse>().ToList();
-        }
-
-        public async Task<CoinLoreResponse> GetCoinByIdAsync(int id, CancellationToken cancellationToken = default)
-        {
-            using var client = httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri(_options.BaseUrl);
-
-            using var response = await client.GetAsync($"ticker/?id={id}", cancellationToken);
-
-            var body = await response.Content.ReadAsStringAsync(cancellationToken);
-
-            return !response.IsSuccessStatusCode
-                ? null
-                : JsonConvert.DeserializeObject<List<CoinLoreResponse>>(body)[0];
-        }
+        return JsonConvert.DeserializeObject<CoinLoreResponseAll>(body)?.Coins ?? [];
     }
+
+    public async Task<CoinLoreResponse> GetCoinByIdAsync(int id, CancellationToken cancellationToken = default)
+    {
+        using var response = await httpClient.GetAsync($"ticker/?id={id}", cancellationToken);
+
+        if (!response.IsSuccessStatusCode)
+            return null;
+
+        var body = await response.Content.ReadAsStringAsync(cancellationToken);
+
+        return JsonConvert.DeserializeObject<List<CoinLoreResponse>>(body)?.FirstOrDefault();
+    }
+}
 }
