@@ -133,6 +133,7 @@ namespace Financial.Bot.HostedServices
 
             if (coinResponse is not null)
             {
+            
                 await _botClient.SendMessage(msg.Chat, $"""
                                                         <b><u> {coinResponse.Name}</u></b>
                                                         ⚡ Symbol: {coinResponse.Symbol}

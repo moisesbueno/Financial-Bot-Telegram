@@ -4,6 +4,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Polly;
+using Quartz;
+using Financial.Bot.Jobs;
 
 namespace Financial.Bot;
 
@@ -57,6 +59,19 @@ public class Program
 
         builder.Services.AddHostedService<TelegramHostedService>();
         builder.Services.AddHostedService<SaveCoinsHostedService>();
+
+        builder.Services.AddQuartz(q =>
+        {
+            var jobKey = new JobKey(nameof(BitcoinPriceNotificationJob));
+            q.AddJob<BitcoinPriceNotificationJob>(opts => opts.WithIdentity(jobKey));
+
+            q.AddTrigger(opts => opts
+                .ForJob(jobKey)
+                .WithIdentity(nameof(BitcoinPriceNotificationJob) + "trigger")
+                .WithCronSchedule("0 0 */6 * * ?"));
+        });
+
+        builder.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
 
         var host = builder.Build();
         host.Run();
